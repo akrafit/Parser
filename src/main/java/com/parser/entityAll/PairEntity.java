@@ -27,13 +27,21 @@ public class PairEntity {
     private String yobitNameId;
     private String yobitPrice;
     private String yobitVolume;
+    private Double yobitDoublePrice;
     private String binanceNameId;
     private String binancePrice;
     private String binanceVolume;
+    private Double binanceDoublePrice;
 
     private String bybitNameId;
     private String bybitPrice;
     private String byBitVolume;
+    private Double bybitDoublePrice;
+
+    private String poloniexNameId;
+    private String poloniexPrice;
+    private String poloniexVolume;
+    private Double poloniexDoublePrice;
 
     public PairEntity(PairBinance pairBinance, PairYobit pairYobit, PairBybit pairBybit) {
         this.code = pairBinance.getCode();

@@ -10,4 +10,6 @@ public interface PairYobitRepository extends JpaRepository<PairYobit, Long> {
     @Query(value = "SELECT * FROM pair_yobit WHERE code LIKE '%_BTC'",
             nativeQuery = true)
     List<PairYobit> getPairYobitByCode();
+
+    List<PairYobit> findByCodeIs(String code);
 }

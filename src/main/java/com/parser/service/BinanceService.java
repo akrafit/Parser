@@ -52,6 +52,7 @@ public class BinanceService {
         symbolDtoList.forEach(symbolDto -> {
             pairBinanceList.add(new PairBinance(symbolDto));
         });
+        System.out.println("загрузка");
         pairBinanceRepository.saveAll(pairBinanceList);
         System.out.println("закончили");
     }

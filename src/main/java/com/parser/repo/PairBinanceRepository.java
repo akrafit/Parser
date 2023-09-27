@@ -10,4 +10,5 @@ public interface PairBinanceRepository extends JpaRepository<PairBinance,Long> {
     @Query(value = "SELECT * FROM pair_binance WHERE code LIKE '%_BTC' AND status = 'TRADING'",
             nativeQuery = true)
     List<PairBinance> getPairBinanceByCode();
+    List<PairBinance> findByCodeIs(String code);
 }
